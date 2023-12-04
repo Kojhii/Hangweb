@@ -1,0 +1,47 @@
+.icegif-83-1-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1728px;
+    height: 1117px;
+    object-fit: cover;
+  }
+  .macbook-pro-16-1-child {
+    position: absolute;
+    top: 534px;
+    left: 723px;
+    width: 338px;
+    height: 74px;
+    mix-blend-mode: color;
+  }
+  .blank-line {
+    margin: 0;
+  }
+  .start-game2 {
+    font-size: 24px;
+    font-family: var(--font-inter);
+  }
+  .start-game {
+    position: absolute;
+    top: 525px;
+    left: 685px;
+    white-space: pre-wrap;
+    display: inline-block;
+    width: 338px;
+    height: 67px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke: 1px #000;
+    mix-blend-mode: hard-light;
+  }
+  .macbook-pro-16-1 {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 1117px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-xs);
+    color: var(--color-white);
+    font-family: var(--font-inter);
+  }
+  

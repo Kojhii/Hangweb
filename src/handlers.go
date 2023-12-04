@@ -6,11 +6,14 @@ import (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	renderTemplate(w, "home")
+	RenderTemplate(w, "home")
+}
+func Startgame(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "startgame")
 }
 
 
-func renderTemplate(w http.ResponseWriter, tmpl string) {
+func RenderTemplate(w http.ResponseWriter, tmpl string) {
 	t, err := template.ParseFiles("./templates_HTML/" + tmpl + ".page.tmpl")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
