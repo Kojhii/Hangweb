@@ -33,51 +33,50 @@ body {
   }
   .start-game2 {
     font-size: 25px;
-  
-   
+    color: white;
+    text-weight: bold;   
   }
-  .start-game {
-    font-weight: bold;
+  .button-start-game {
+    font-size: 25px;
     cursor: pointer;
     position: absolute;
-    top: 75px;
+    top: 1000px;
     left: 400px;
-    color: white;
-   
+    padding: 24px 32px;
     width: 1000px;
     height: 50px;
     text-align: center;
-    
-    -webkit-text-stroke: 1px #000;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
     mix-blend-mode: hard-light;
-  }
-  .macbook-pro-16-1 {
-    position: relative;
-    background-color: var(--color-white);
-    width: 100%;
-    height: 1117px;
-    overflow: hidden;
-    text-align: left;
-    font-size: var(--font-size-xs);
-    color: var(--color-white);
-  }
-  p1 {
-  color: white;
+    
+    }
+    
+    
   }
     </style>
   </head>
   <body>
-    <div class="macbook-pro-16-1">
+    
 
      
 
-      <div class="start-game">
+      <div class="button-start-game">
         <p class="blank-line">&nbsp;</p>
         <p class="blank-line"></p>
           <span> </span>
-          <b class="start-game2" onclick="window.location.href = 'http://localhost:8887/startgame';"> <p1>  START GAME ? </p1> </b>
+          <b class="start-game2" onclick="window.location.href = 'http://localhost:8887/startgame';">   BEGIN THE ADVENTURE... ?  </b>
         </p>
       </div>
-    </div>
+    
   </body>
 </html>
