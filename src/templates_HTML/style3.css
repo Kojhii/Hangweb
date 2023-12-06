@@ -1,0 +1,8 @@
+* {
+    background: url("https://preview.redd.it/yy49p6gm8wb71.gif?width=637&auto=webp&s=ed7a0df3800ca80c808767583362815667998fff") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow:hidden;
+}
