@@ -1,5 +1,5 @@
     * {
-    background: url("https://media1.tenor.com/m/MbgNbKrQx08AAAAC/pixel-city-rain.gif") no-repeat center center fixed; 
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/c1c6f445335437.582d0c869491d.gif") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -14,7 +14,6 @@ body {
     font-size: 25px;
     color: 	white;
     font-family: "Retro Gaming";
-    background: black;
     animation: typewriter 3s steps(44) 1s 1 normal both,
              blinkTextCursor 1000ms steps(44)  normal;
     
@@ -33,11 +32,11 @@ body {
   .text-case {
     font-size: 25px;
     position: absolute;
-    top: 300px;
-    left: 0px;
+    top: 0px;
+    left: 420px;
     padding: 24px 32px;
-    width: 1100px;
-    height: 475px;
+    width: 1000px;
+    height: 50px;
     text-align: center;
     display: inline-block;
     border-radius: 15px;
@@ -48,7 +47,8 @@ body {
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background: black;
+    
+    mix-blend-mode: hard-light;
     
     }
     .button-next-page{
