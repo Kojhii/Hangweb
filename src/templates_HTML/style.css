@@ -10,10 +10,7 @@ body {
   margin: 0;
   line-height: normal;
 }
-@font-face {
-  font-family: retroHorror;
-  src: url("JMH\ Cthulhumbus\ Arcade\ UG.ttf");
-}
+
 
   #play{
     
@@ -39,27 +36,7 @@ body {
 
         
         }
-        .text-case {
-          font-family: "retroHorror";
-          font-size: 35px;
-          position: absolute;
-          top: -50px;
-          left: 430px;
-          padding: 24px 32px;
-          width: 1000px;
-          height: 110px;
-          text-align: center;
-          display: inline-block;
-          border-radius: 15px;
-          background-color: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.1);
-          backdrop-filter: blur(30px);
-          color: rgba(255,255,255,0.8);
-          letter-spacing: 2px;
-          text-transform: uppercase;
-          color:crimson;
-          mix-blend-mode:soft-light;          
-          }
+
   
   .blank-line {
   background:black;

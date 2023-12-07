@@ -51,7 +51,7 @@ body {
     mix-blend-mode: hard-light;
     
     }
-    .button-next-page{
+    #play{
     font-family: "Retro Gaming";
     color: #21EF2F;
     font-size: 25px;
@@ -73,11 +73,11 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     background: black;
-    
+    }
     .blank-line {
   background:black;
     margin: 0;
   }
     
-    }
+    
     

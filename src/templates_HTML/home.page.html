@@ -13,21 +13,27 @@
         <p class="blank-line">&nbsp;</p>
         <p class="blank-line"></p>
           <span> </span>
-          <b class="start-game2" onclick="window.location.href = 'http://localhost:8887/startgame';">   START YOUR ADVENTURE ?  </b>
+          <b class="start-game2" onclick="window.location.href = 'http://localhost:8887/startgame';">   WIll you save humanity...?  </b>
         </p>
       </div>
       <button  id="play">Music</button>
       <script>
-           let play = document.getElementById("play");
-               function playMusic() {
-                let audio = new Audio("templates_HTML/darkintro2.mp3");
+        let playButton = document.getElementById('play');
+        let audio = null;
+    
+        function playMusic() {
+            if (!audio) {
+                audio = new Audio('templates_HTML/darkmainmenu.mp3');
                 audio.loop = true;
-                audio.play()
-             }
-             play.addEventListener("click", playMusic);
-      </script>
-      <div class="text-case">
-        <h1> the order... </h1>
-      <div>
+            }
+    
+            if (!audio.playing) {
+                audio.play();
+            }
+        }
+    
+        playButton.addEventListener('click', playMusic);
+    </script>
+      
   </body>
 </html>
