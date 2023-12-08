@@ -21,13 +21,13 @@ body {
         left: 0px;
         padding: 24px 32px;
         width: 150px;
-        height: 0px;
+        height: 10px;
         text-align: center;
         display: inline-block;
         border-radius: 15px;
         border: 1px solid rgba(255,255,255,0.1);
         backdrop-filter: blur(30px);
-        color: rgba(255,255,255,0.8);
+        color: rgba(255, 255, 255, 0.8);
         font-size: 14px;
         letter-spacing: 2px;
         text-transform: uppercase;

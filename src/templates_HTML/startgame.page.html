@@ -14,23 +14,32 @@
 <body>
       <div class="text-case">
 
-        <h1 class="start-game2" >Welcome to the city of neom...</h1>          
+        <h1 class="start-game2" >Welcome to Neom, our last hope</h1>          
     </div>
     <p class="blank-line">&nbsp;</p>
         <p class="blank-line"></p>
           <span> </span>
-              <b id="play" >   Who are you ? </b>
-              <script>
-                let play = document.getElementById("play");
-                    function playMusic() {
-                     let audio = new Audio("templates_HTML/darkintro2.mp3");
-                     audio.loop = true;
-                     audio.play()
-                  }
-                  play.addEventListener("click", playMusic);
-           </script>
+  </p>
+          <button  id="play">Who are you...?</button>
+          <script>
+            let playButton = document.getElementById('play');
+            let audio = null;
+        
+            function playMusic() {
+                if (!audio) {
+                    audio = new Audio('templates_HTML/darkmainmenu.mp3');
+                    audio.loop = true;
+                }
+        
+                if (!audio.playing) {
+                    audio.play();
+                }
+            }
+        
+            playButton.addEventListener('click', playMusic);
+        </script>
               
-        </p>
+        
       
 </body>
 
