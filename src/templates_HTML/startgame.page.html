@@ -10,37 +10,160 @@
     <link href="templates_HTML/style2.css" type="text/css" rel="stylesheet">
 
 </head>
+<style>
+      * {
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/c1c6f445335437.582d0c869491d.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow:hidden;
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+.start-game2 {
+    font-size: 25px;
+    color: 	white;
+    font-family: "Retro Gaming";
+    display:inline-block;
+	animation-fill-mode: forwards;
+}
 
+  .text-case {
+    font-size: 25px;
+    position: absolute;
+    top: 0px;
+    left: 420px;
+    padding: 24px 32px;
+    width: 1000px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    mix-blend-mode: hard-light;
+    
+    }
+  #play{
+    font-family: "Retro Gaming";
+    color: #21EF2F;
+    font-size: 25px;
+    position: absolute;
+    top: 970px;
+    left: 450px;
+    padding: 24px 32px;
+    width: 1000px;
+    height: 85px;
+    display: none;
+
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: black;
+    display:inline-block;
+  }
+ 
+  
+    
+    .blank-line {
+  background:black;
+    margin: 0;
+  }
+
+  .maintext {
+    color:white
+  }
+    
+
+
+    
+</style>
 <body>
       <div class="text-case">
-
         <h1 class="start-game2" >Welcome to Neom...</h1>          
     </div>
-    <p class="blank-line">&nbsp;</p>
-        <p class="blank-line"></p>
-          <span> </span>
-  </p>
-          <button  id="play">Who are you...?</button>
-          <script>
-            let playButton = document.getElementById('play');
-            let audio = null;
+    
+    
+  <button onclick="window.location.href = 'http://localhost:8080/firsthistory';" id="play">Where i am...?</button>
+        </div>
+        <audio id="music" src="templates_HTML/chilldarksoul.mp3" autoplay loop></audio>
+        <script>
+          const playButtonEl = document.querySelector("#play");
+          const audioEl = document.querySelector("#music");
         
-            function playMusic() {
-                if (!audio) {
-                    audio = new Audio('templates_HTML/darkmainmenu.mp3');
-                    audio.loop = true;
-                }
-        
-                if (!audio.playing) {
-                    audio.play();
-                }
-            }
-        
-            playButton.addEventListener('click', playMusic);
+  
+          document.addEventListener("DOMContentLoaded", () => {
+            audioEl.volume = 0.5; // change volume auto
+  
+            setTimeout(() => {  // play after 1000 ms home.page.html:44 Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD
+              audioEl.play();
+              isPlaying = true;
+            }, 1000);
+          });
+  
+          "use strict";
+window.addEventListener("DOMContentLoaded", (event) => {
+  animate_text();
+});
+// -------------------
+function animate_text() 
+{
+  let delay = 100,
+      delay_start = 0,
+      contents,
+      letters;
+
+  document.querySelectorAll(".start-game2").forEach(function (elem) {
+    contents = elem.textContent.trim();
+    elem.textContent = "";
+    letters = contents.split("");
+    elem.style.visibility = 'visible';
+
+    letters.forEach(function (letter, index_1) {
+      setTimeout(function () {
+        elem.textContent += letter;
+      }, delay_start + delay * index_1);
+    });    
+    delay_start += delay * letters.length;
+  });
+}                                                                                                                                                                                                                                                                      
+function animate_text() 
+{
+  let delay = 100,
+      delay_start = 0,
+      contents,
+      letters;
+
+  document.querySelectorAll("#play").forEach(function (elem) {
+    contents = elem.textContent.trim();
+    elem.textContent = "";
+    letters = contents.split("");
+    elem.style.visibility = 'visible';
+
+    letters.forEach(function (letter, index_1) {
+      setTimeout(function () {
+        elem.textContent += letter;
+      }, delay_start + delay * index_1);
+    });    
+    delay_start += delay * letters.length;
+  });
+}                                           
         </script>
-              
         
-      
 </body>
 
 </html>

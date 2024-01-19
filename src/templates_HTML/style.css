@@ -1,84 +1,75 @@
 * {
-    background: url("https://giffiles.alphacoders.com/217/217733.gif") no-repeat center center fixed; 
+  background: url("https://giffiles.alphacoders.com/217/217733.gif") no-repeat
+    center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow:hidden;
+  overflow: hidden;
 }
 body {
   margin: 0;
   line-height: normal;
 }
 
-
-  #play{
-    
-        background:black;
-        font-size: 25px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        padding: 24px 32px;
-        width: 150px;
-        height: 10px;
-        text-align: center;
-        display: inline-block;
-        border-radius: 15px;
-        border: 1px solid rgba(255,255,255,0.1);
-        backdrop-filter: blur(30px);
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 14px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-family: Retro Gaming;
-        cursor: pointer;
-
-        
-        }
-
+#play {
+  background: black;
+  font-size: 25px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 24px 32px;
+  width: 150px;
+  height: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: Retro Gaming;
+  cursor: pointer;
   
-  .blank-line {
-  background:black;
-    margin: 0;
-  }
-  .start-game2 {
-    background:black;
-    cursor: pointer;
-    font-size: 25px;
-    color: #21EF2F;
-    font-family: "Retro Gaming";
-    overflow: hidden; 
-  border-right: .15em solid black;
-  white-space: nowrap; 
-  letter-spacing: .15em; 
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
 }
 
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #21EF2F; }
+.blank-line {
+  background: black;
+  margin: 0;
 }
+.start-game2 {
+  background: black;
+  cursor: pointer;
+  font-size: 25px;
+  color: #21ef2f;
+  font-family: "Retro Gaming";
+  overflow: hidden;
+  border-right: 0.15em solid black;
+  letter-spacing: 0.15em;
+}
+  
 
-  .button-start-game {
-    background:black;
-    position: absolute;
-    top: 950px;
-    left: 450px;
-    padding: 24px 32px;
-    width: 1000px;
-    height: 50px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(30px);
-    color: rgba(255,255,255,0.8);
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    
-    }
+
+.button-start-game {
+  background: black;
+  position: absolute;
+  top: 950px;
+  left: 450px;
+  padding: 24px 32px;
+  width: 1000px;
+  height: 50px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  
+}

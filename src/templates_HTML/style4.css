@@ -1,0 +1,8 @@
+* {
+  background: url("https://media2.giphy.com/media/26uflldCb2KUYNrbO/giphy.gif?cid=ecf05e47tfpe30go6aglzwsp3bbrdummi1i25gw4llfip5bm&ep=v1_gifs_related&rid=giphy.gif&ct=g") no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+overflow:hidden;
+}

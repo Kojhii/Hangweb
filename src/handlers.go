@@ -14,8 +14,11 @@ func Startgame(w http.ResponseWriter, r *http.Request) {
 func Character(w http.ResponseWriter, r *http.Request) {
 	RenderTemplate(w, "character")
 }
-func Style(w http.ResponseWriter, r *http.Request) {
-	RenderTemplate(w, "character")
+func FirstHistory(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "firsthistory")
+}
+func Character2(w http.ResponseWriter, r *http.Request) {
+	RenderTemplate(w, "character2")
 }
 
 
