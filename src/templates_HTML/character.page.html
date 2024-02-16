@@ -5,30 +5,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character</title>
+    <title>THE ORDER</title>
     <link href="https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming" rel="stylesheet">
-    <link href="templates_HTML/style3.css" type="text/css" rel="stylesheet">
-    <style>
-        * {
-  background: url("https://i.pinimg.com/originals/84/4e/e8/844ee8bb00fdd6530d434b4be9d490b6.gif")  no-repeat
-    center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow: hidden;
-}
- 
-.text{
-    color: white;
-}
-    </style>
+    <link href="templates_HTML/style/character.css" type="text/css" rel="stylesheet">
 
-   
 </head>
 
 <body>
-     <p class ="text">test</p>
+     <p class ="maintext">You were one of mankind's last hopes, codename "Elhadi"...When the Order attacked the laboratory where you were created, the Resistance decided to seal you up and hide you...We came to get you back after everything had been destroyed...it was the only solution...</p>
+     <button onclick="window.location.href = 'http://localhost:8080/character1'" id="play">Project Elhadi ? The order ?...</button>
+        </div>
+        <audio id="music" src="/templates_HTML/music/chilldarksoul.mp3" autoplay loop></audio>
+        <script>
+          const playButtonEl = document.querySelector("#play");
+          const audioEl = document.querySelector("#music");
+        
+  
+          document.addEventListener("DOMContentLoaded", () => {
+            audioEl.volume = 0.5; // change volume auto
+  
+            setTimeout(() => {  // play after 1000 ms home.page.html:44 Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD
+              audioEl.play();
+              isPlaying = true;
+            }, 1000);
+          });
+  
+          "use strict";
+window.addEventListener("DOMContentLoaded", (event) => {
+  animate_text();
+  animate_text2();
+});
+// -------------------
+                                                                                                                                                                                                                                                               
+function animate_text() 
+{
+  let delay = 40,
+      delay_start = 0,
+      contents,
+      letters;
+
+  document.querySelectorAll(".maintext").forEach(function (elem) {
+    contents = elem.textContent.trim();
+    elem.textContent = "";
+    letters = contents.split("");
+    elem.style.visibility = 'visible';
+
+    letters.forEach(function (letter, index_1) {
+      setTimeout(function () {
+        elem.textContent += letter;
+      }, delay_start + delay * index_1);
+    });    
+    delay_start += delay * letters.length;
+  });
+}  
+function animate_text2() {
+  let delay = 60,
+      delay_start = 0,
+      contents,
+      letters;
+
+  document.querySelectorAll("#play").forEach(function (elem) {
+    contents = elem.textContent.trim();
+    elem.textContent = "";
+    letters = contents.split("");
+    elem.style.visibility = 'visible';
+
+    // Attendre 10 secondes avant de commencer
+    setTimeout(function () {
+      letters.forEach(function (letter, index_1) {
+        setTimeout(function () {
+          elem.textContent += letter;
+        }, delay_start + delay * index_1);
+      });
+    }, 10000); // 10000 millisecondes = 10 secondes
+
+    delay_start += delay * letters.length;
+  });
+}                     
+var hitElement = document.querySelector('.hits');
+
+document.body.onkeyup = function(e) {
+  if (e.keyCode == 32) {
+    redirectToLink();  // Appel de la fonction pour rediriger vers le lien
+  }
+}
+
+function redirectToLink() {
+  window.location.href = 'http://localhost:8080/character1';
+}            
+        </script>
+        
+</body>
          
 </body>
 

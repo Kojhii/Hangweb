@@ -5,105 +5,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>startgame</title>
+  <title>THE ORDER</title>
   <link href="https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming" rel="stylesheet">
-  <link href="style2.css" type="text/css" rel="stylesheet">
+  <link href="templates_HTML/style/firsthistory.css" type="text/css" rel="stylesheet">
 
 </head>
-<style>
-      * {
-    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/c1c6f445335437.582d0c869491d.gif") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  overflow:hidden;
-}
-body {
-  margin: 0;
-  line-height: normal;
-}
-.start-game2 {
-    font-size: 25px;
-    color: 	white;
-    font-family: "Retro Gaming";
-    display:inline-block;
-	animation-fill-mode: forwards;
-}
-
-  .text-case {
-    font-size: 25px;
-    position: absolute;
-    top: 0px;
-    left: 420px;
-    padding: 24px 32px;
-    width: 1000px;
-    height: 50px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 15px;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(30px);
-    color: rgba(255,255,255,0.8);
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    
-    mix-blend-mode: hard-light;
-    
-    }
-  #play{
-    font-family: "Retro Gaming";
-    color: #21EF2F;
-    font-size: 25px;
-    position: absolute;
-    top: 970px;
-    left: 450px;
-    padding: 24px 32px;
-    width: 1000px;
-    height: 85px;
-    display: none;
-
-    border-radius: 15px;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(30px);
-    cursor: pointer;
-    font-size: 25px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    background: black;
-    display:inline-block;
-  }
  
-  
-    
-    .blank-line {
-  background:black;
-    margin: 0;
-  }
-
-  .maintext {
-    color:white;
-    position: absolute;
-    top: 500px;
-    left: 450px;
-    padding: 24px 32px;
-    width: 1000px;
-    height: 85px;
-    background: black;
-  }
-    
-
-
-    
-</style>
 <body>
-  <p class="maintext"> Test</p>
+  <p class="maintext"> So you're finally awake...A lot of life has been lost to get you back, everything must seem blurry to you... your memories have been lost since they sealed you...However we have no time to lose, the future of humanity is in your hands.</p>
   <button onclick="window.location.href = 'http://localhost:8080/character'" id="play">I was sealed...?</button>
         </div>
-        <audio id="music" src="" autoplay loop></audio>
+        <audio id="music" src="/templates_HTML/music/chilldarksoul.mp3" autoplay loop></audio>
         <script>
           const playButtonEl = document.querySelector("#play");
           const audioEl = document.querySelector("#music");
@@ -127,7 +39,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                                                                                                                                                                                                                                                                
 function animate_text() 
 {
-  let delay = 100,
+  let delay = 30,
       delay_start = 0,
       contents,
       letters;
@@ -165,11 +77,22 @@ function animate_text2() {
           elem.textContent += letter;
         }, delay_start + delay * index_1);
       });
-    }, 10000); // 10000 millisecondes = 10 secondes
+    }, 6000); // 10000 millisecondes = 10 secondes
 
     delay_start += delay * letters.length;
   });
-}                                 
+}                
+var hitElement = document.querySelector('.hits');
+
+document.body.onkeyup = function(e) {
+  if (e.keyCode == 32) {
+    redirectToLink();  // Appel de la fonction pour rediriger vers le lien
+  }
+}
+
+function redirectToLink() {
+  window.location.href = 'http://localhost:8080/character';
+}                 
         </script>
         
 </body>

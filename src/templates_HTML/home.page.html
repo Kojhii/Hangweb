@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link href="templates_HTML/style.css" type="text/css" rel="stylesheet">
+    <title>THE ORDER</title>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="initial-scale=1, width=device-width" >
+    <link href="/templates_HTML/style/style.css" type="text/css" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming" rel="stylesheet">
-  
-  </head>
+</head>
   <body>
       <div class="button-start-game">
-
         <p class="blank-line">&nbsp;</p>
         <p class="blank-line"></p>
-        <b class="start-game2" onclick="window.location.href = 'http://localhost:8080/startgame';">   Will you save humanity...?  </b>
-
+        <b class="start-game2" onclick="window.location.href = 'http://localhost:8080/image0to1';">   Will you save humanity...?  </b>
           <span> </span>
-          
-          
-
-
         </p>
       </div>
-      <audio id="music" src='./afterdark.mp3' autoplay loop></audio>
+      <audio id="music" src='/templates_HTML/music/afterdark.mp3' autoplay loop></audio>
       <button id="play" >Music</button>
 
       <script>
@@ -61,7 +55,7 @@
 // -------------------
 function animate_text() 
 {
-  let delay = 100,
+  let delay = 75,
       delay_start = 0,
       contents,
       letters;
@@ -72,14 +66,30 @@ function animate_text()
     letters = contents.split("");
     elem.style.visibility = 'visible';
 
-    letters.forEach(function (letter, index_1) {
-      setTimeout(function () {
-        elem.textContent += letter;
-      }, delay_start + delay * index_1);
-    });    
+    // Attendre 10 secondes avant de commencer
+    setTimeout(function () {
+      letters.forEach(function (letter, index_1) {
+        setTimeout(function () {
+          elem.textContent += letter;
+        }, delay_start + delay * index_1);
+      });
+    }, 250); // 10000 millisecondes = 10 secondes
+
     delay_start += delay * letters.length;
   });
 }             
+
+var hitElement = document.querySelector('.hits');
+
+document.body.onkeyup = function(e) {
+  if (e.keyCode == 32) {
+    redirectToLink();  // Appel de la fonction pour rediriger vers le lien
+  }
+}
+
+function redirectToLink() {
+  window.location.href = 'http://localhost:8080/image0to1';
+}
       </script>
   </body>
 </html>

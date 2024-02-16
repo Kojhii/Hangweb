@@ -5,29 +5,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character</title>
+    <title>THE ORDER</title>
+    <link href="templates_HTML/style/character2.css" type="text/css" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming" rel="stylesheet">
-    <link href="templates_HTML/style3.css" type="text/css" rel="stylesheet">
-    <style>
-        * {
-  background: url("https://media2.giphy.com/media/26uflldCb2KUYNrbO/giphy.gif?cid=ecf05e47tfpe30go6aglzwsp3bbrdummi1i25gw4llfip5bm&ep=v1_gifs_related&rid=giphy.gif&ct=g")  center center fixed; 
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-color: black;
-    background-position: right;
-    
-}
-.text{
-    color: white;
-}
-    </style>
-
-   
+    <link href="https://db.onlinewebfonts.com/c/2f48abc8c45de9add264c5be432e878e?family=HACKED" rel="stylesheet">  
 </head>
 
 <body>
-     <p class ="text">tesaaat</p>
-         
+  <div id="background"></div>
+     <p class ="maintext">I remember .......................... Before my creation,the world was fine... until THE ORDER and his damn robots arrived, destroying everything... I'm the incarnation of human anger, born to destroy THE ORDER.... It's noy my memory , but the heritage of humanity's last resisters...i'm the Project Elhadi... also known as the sin of anger... I REMEMBER ALL THE LIVES LOST AGAINST THE ORDER........... I know what my task is now...</p>
+     <p class ="secondtext">I WILL KILL ALL OF THEM, FUCKING BASTARDS </p>
+     <button onclick="window.location.href = 'http://localhost:8080/introhangman'" id="play">**WAKE UP**</button>
+
+     <script>
+        const playButtonEl = document.querySelector("#play");
+        const audioEl = document.querySelector("#music");
+      
+
+        document.addEventListener("DOMContentLoaded", () => {
+          audioEl.volume = 0.5; // change volume auto
+
+          setTimeout(() => {  // play after 1000 ms home.page.html:44 Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD
+            audioEl.play();
+            isPlaying = true;
+          }, 1000);
+        });
+
+        "use strict";
+window.addEventListener("DOMContentLoaded", (event) => {
+animate_text();
+animate_text2();
+animate_text3();
+});
+// -------------------
+document.addEventListener("DOMContentLoaded", function() {
+    // Utilisez setTimeout pour retarder l'affichage du background
+    setTimeout(function() {
+        document.getElementById("background").style.display = "block";
+    }, 15200); // 10000 millisecondes équivalent à 10 secondes
+});                                                                                                                                                                                                                                                             
+function animate_text() 
+{
+let delay = 35,
+    delay_start = 0,
+    contents,
+    letters;
+
+document.querySelectorAll(".maintext").forEach(function (elem) {
+  contents = elem.textContent.trim();
+  elem.textContent = "";
+  letters = contents.split("");
+  elem.style.visibility = 'visible';
+
+  letters.forEach(function (letter, index_1) {
+    setTimeout(function () {
+      elem.textContent += letter;
+    }, delay_start + delay * index_1);
+  });    
+  delay_start += delay * letters.length;
+});
+}  
+function animate_text2() {
+let delay = 100,
+    delay_start = 0,
+    contents,
+    letters;
+
+document.querySelectorAll("#play").forEach(function (elem) {
+  contents = elem.textContent.trim();
+  elem.textContent = "";
+  letters = contents.split("");
+  elem.style.visibility = 'visible';
+
+  // Attendre 10 secondes avant de commencer
+  setTimeout(function () {
+    letters.forEach(function (letter, index_1) {
+      setTimeout(function () {
+        elem.textContent += letter;
+      }, delay_start + delay * index_1);
+    });
+  }, 18500); // 10000 millisecondes = 10 secondes
+
+  delay_start += delay * letters.length;
+});
+}
+function animate_text3() {
+let delay = 100,
+    delay_start = 0,
+    contents,
+    letters;
+
+document.querySelectorAll(".secondtext").forEach(function (elem) {
+  contents = elem.textContent.trim();
+  elem.textContent = "";
+  letters = contents.split("");
+  elem.style.visibility = 'visible';
+
+  // Attendre 10 secondes avant de commencer
+  setTimeout(function () {
+    letters.forEach(function (letter, index_1) {
+      setTimeout(function () {
+        elem.textContent += letter;
+      }, delay_start + delay * index_1);
+    });
+  }, 11000); // 10000 millisecondes = 10 secondes
+
+  delay_start += delay * letters.length;
+});
+}              
+var hitElement = document.querySelector('.hits');
+
+document.body.onkeyup = function(e) {
+  if (e.keyCode == 32) {
+    redirectToLink();  // Appel de la fonction pour rediriger vers le lien
+  }
+}
+
+function redirectToLink() {
+  window.location.href = 'http://localhost:8080/introhangman';
+}                      
+      </script>                                 
+      
 </body>
 
 </html>

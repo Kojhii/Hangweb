@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE ORDER</title>
+  <link href="https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming" rel="stylesheet">
+  <link href="style2.css" type="text/css" rel="stylesheet">
+
+</head>
+<style>
+      * {
+      background: black;
+      }
+
+  #play{
+    font-family: "Retro Gaming";
+    color: white;
+    position: absolute;
+    top: 970px;
+    left: 450px;
+    padding: 24px 32px;
+    width: 1000px;
+    height: 85px;
+    display: none;
+
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: black;
+    display:inline-block;
+  }
+ 
+  
+    
+    .blank-line {
+  background:black;
+    margin: 0;
+  }
+
+  .maintext {
+    border-radius: 15px;
+    font-family: "Retro Gaming";
+    color:white;
+    position: absolute;
+    top: 350px;
+    left: 450px;
+    padding: 24px 32px;
+    width: 1000px;
+    height: 250px;
+    background: black;
+    font-size: 90px;
+
+  }
+    
+
+
+    
+</style>
+<body>
+    <p class ="maintext">END OF CHAPTER 1</p>
+  <button onclick="window.location.href = 'https://www.youtube.com/watch?v=MeRBFIywDQU'" id="play"> Start chapter 2 "resist"...?</button>
+        <audio id="music" src="" autoplay loop></audio>
+        <script>
+          const playButtonEl = document.querySelector("#play");
+          const audioEl = document.querySelector("#music");
+        
+  
+          document.addEventListener("DOMContentLoaded", () => {
+            audioEl.volume = 0.5; // change volume auto
+  
+            setTimeout(() => {  // play after 1000 ms home.page.html:44 Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first. https://goo.gl/xX8pDD
+              audioEl.play();
+              isPlaying = true;
+            }, 1000);
+          });
+  
+          "use strict";
+window.addEventListener("DOMContentLoaded", (event) => {
+  animate_text();
+  animate_text2();
+});
+// -------------------
+                                                                                                                                                                                                                                                               
+function animate_text() 
+{
+  let delay = 100,
+      delay_start = 10,
+      contents,
+      letters;
+
+  document.querySelectorAll(".maintext").forEach(function (elem) {
+    contents = elem.textContent.trim();
+    elem.textContent = "";
+    letters = contents.split("");
+    elem.style.visibility = 'visible';
+
+    letters.forEach(function (letter, index_1) {
+      setTimeout(function () {
+        elem.textContent += letter;
+      }, delay_start + delay * index_1);
+    });    
+    delay_start += delay * letters.length;
+  });
+}  
+function animate_text2() {
+  let delay = 75,
+      delay_start = 0,
+      contents,
+      letters;
+
+  document.querySelectorAll("#play").forEach(function (elem) {
+    contents = elem.textContent.trim();
+    elem.textContent = "";
+    letters = contents.split("");
+    elem.style.visibility = 'visible';
+
+    // Attendre 10 secondes avant de commencer
+    setTimeout(function () {
+      letters.forEach(function (letter, index_1) {
+        setTimeout(function () {
+          elem.textContent += letter;
+        }, delay_start + delay * index_1);
+      });
+    }, 2500); // 10000 millisecondes = 10 secondes
+
+    delay_start += delay * letters.length;
+  });
+}                                 
+        </script>
+        
+</body>
+
+</html>

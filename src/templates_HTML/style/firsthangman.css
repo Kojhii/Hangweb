@@ -1,0 +1,186 @@
+body {
+    background: black;
+    display:flex;
+    align-items: center;
+    min-height: 100vh;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+overflow:hidden;
+}
+.instruction {
+font-size: 25px;
+color: 	white;
+font-family: "Retro Gaming";
+display:inline-block;
+  animation-fill-mode: forwards;
+position: absolute;
+top: -20px;
+left: 420px;
+padding: 24px 32px;
+width: 1000px;
+height: 45px;
+text-align: center;
+display: inline-block;
+border-radius: 15px;
+background-color: rgba(255,255,255,0.1);
+border: 1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(30px);
+
+font-size: 25px;
+letter-spacing: 2px;
+text-transform: uppercase;
+
+background-color: black;
+}
+.container{
+background-color:gray;
+background-size: cover;
+gap:70px;
+font-family: "Retro Gaming";
+width: 2000px;
+border-radius: 15px;
+right: auto;
+height: 400px;
+padding: 60px,40px;
+}
+.word-display{
+margin-bottom: -20px;
+justify-content: center;
+display:flex;
+gap:10px;
+list-style:none;
+align-items: center;
+}
+.word-display .letter{
+justify-content: center;
+text-transform: uppercase;
+width: 28px;
+border-bottom: 3px solid black;
+font-size: 2rem;
+font-weight: 600;
+margin-bottom: 0px;
+}
+.word-display .letter-guessed{
+text-transform: uppercase;
+border-color: transparent;
+margin-bottom: 0px;
+font-size: 1.5rem;
+}
+.game-box .keyboard {
+display: flex ;
+gap: 5px;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+
+
+
+.keyboard button {
+font-family: "Retro Gaming";
+background: gray;
+border-bottom: 6px inset rgba(0,0,0,.5);
+border-left: 6px inset rgba(0,0,0,.5);
+border-right: 6px inset rgba(255,255,255,.5);
+border-top: 6px inset rgba(255,255,255,.5);
+box-sizing: border-box;
+color: black;
+cursor: pointer;
+display: inline-block;
+font-size: 1.5rem;
+margin: 0.2rem;
+
+padding: .5rem;
+text-transform: uppercase;
+
+width: calc(75% / 9 - 5px);
+
+
+}
+.keyboard button:hover{
+background: red;
+}
+.keyboard button[disabled]{
+opacity: 0.4;
+pointer-events: none;
+}
+
+.game-box h4{
+text-align: center;
+font-weight: 500;
+font-size: 1.1rem;
+margin-bottom: 15px;
+}
+.game-box h4 b{
+font-weight: 600;
+}
+.game-box .guesses-text b {
+color: #f00;
+}
+
+.game-box .hint-text {
+margin-bottom: 30px;
+}
+.game-modal {
+font-family: "Retro Gaming";
+display: flex;
+align-items: center;
+justify-content: center;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+position: fixed;
+background: rgba(0,0,0,0.6);
+opacity: 0;
+z-index: 999;
+pointer-events: none;
+}
+.game-modal .content {
+background:gray;
+max-width: 420px;
+width: 100%;
+text-align: center;
+border-radius: 10px;
+padding: 30px;
+}
+.game-modal h4 {
+font-size: 1.5rem;
+
+}
+.game-modal p {
+font-size: 1.15rem;
+margin: 15px 0 30px;
+font-weight: 500;
+}
+
+.game-modal p b {
+color: #f00;
+font-weight: 600;
+}
+.game-modal button {
+font-family: "Retro Gaming";
+background: gray;
+border-bottom: 6px inset rgba(0,0,0,.5);
+border-left: 6px inset rgba(0,0,0,.5);
+border-right: 6px inset rgba(255,255,255,.5);
+border-top: 6px inset rgba(255,255,255,.5);
+box-sizing: border-box;
+color: black;
+cursor: pointer;
+display: inline-block;
+font-size: 1rem;
+margin: 0.2rem;
+text-transform: uppercase;
+width: 210px;
+height: 50px;
+}
+.game-modal.show {
+opacity: 1;
+pointer-events: auto;
+}
+.game-modal button:hover{
+background: red;
+}

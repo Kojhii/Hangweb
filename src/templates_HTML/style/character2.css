@@ -1,0 +1,66 @@
+* {
+    background-color: black;
+  }
+#background {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url("https://media2.giphy.com/media/6yU2rgLBHmOQQZA9Bd/giphy.gif?cid=82a1493bgq87v0pi0rdoxrp8xwq071w687r7d9lm7hou8yd3&ep=v1_videos_related&rid=giphy.gif&ct=v") center center fixed;
+background-size: 995px;
+background-repeat: no-repeat;
+background-color: black;
+background-position: right;
+display: none; /* Cachez initialement le background */
+}
+
+.maintext {
+font-family: "Retro Gaming";
+color: white;
+position: absolute;
+top: -50px;
+left: 0px;
+padding: 24px 32px;
+width: 775px;
+height: 800px;
+background: black;
+font-size: 41px;
+}
+#play{
+font-family: "Retro Gaming";
+color: red;
+font-size: 25px;
+position: absolute;
+top: 970px;
+left: 15px;
+padding: 24px 32px;
+width: 775px;
+height: 85px;
+display: none;
+
+border-radius: 15px;
+background-color: rgba(255,255,255,0.1);
+border: 1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(30px);
+cursor: pointer;
+font-size: 25px;
+letter-spacing: 2px;
+text-transform: uppercase;
+background: black;
+display:inline-block;
+}
+.secondtext{
+font-weight: bold;
+font-family: "Retro Gaming";
+color: red;
+background-color: black;
+position: absolute;
+top: 775px;
+left: 0px;
+padding: 24px 32px;
+width: 775px;
+height: 100px;
+font-size: 35px;
+letter-spacing: 10px;
+}

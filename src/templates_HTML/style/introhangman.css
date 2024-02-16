@@ -1,0 +1,87 @@
+* {
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/c1c6f445335437.582d0c869491d.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow:hidden;
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+.start-game2 {
+    font-size: 25px;
+    color: 	white;
+    font-family: "Retro Gaming";
+    display:inline-block;
+	animation-fill-mode: forwards;
+}
+
+  .text-case {
+    font-size: 25px;
+    position: absolute;
+    top: 0px;
+    left: 420px;
+    padding: 24px 32px;
+    width: 1000px;
+    height: 50px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    mix-blend-mode: hard-light;
+    
+    }
+  #play{
+    font-family: "Retro Gaming";
+    color: #21ef2f;
+    font-size: 25px;
+    position: absolute;
+    top: 970px;
+    left: 450px;
+    padding: 24px 32px;
+    width: 1000px;
+    height: 85px;
+    display: none;
+
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: black;
+    display:inline-block;
+  }
+ 
+  
+    
+    .blank-line {
+  background:black;
+    margin: 0;
+  }
+
+  .maintext {
+    border-radius: 15px;
+    font-family: "Retro Gaming";
+    color:white;
+    position: absolute;
+    top: 350px;
+    left: 450px;
+    padding: 24px 32px;
+    width: 1000px;
+    height: 200px;
+    background: black;
+    font-size: 33px;
+
+  }

@@ -1,0 +1,46 @@
+* {
+    background: url("https://i.pinimg.com/originals/84/4e/e8/844ee8bb00fdd6530d434b4be9d490b6.gif")  no-repeat
+      center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+  }
+   
+  .maintext {
+      border-radius: 15px;
+      font-family: "Retro Gaming";
+      color:white;
+      position: absolute;
+      top: 350px;
+      left: 450px;
+      padding: 24px 32px;
+      width: 1000px;
+      height: 200px;
+      background: black;
+      font-size: 28px;
+    }
+    #play{
+      font-family: "Retro Gaming";
+      color: #21EF2F;
+      font-size: 25px;
+      position: absolute;
+      top: 970px;
+      left: 450px;
+      padding: 24px 32px;
+      width: 1000px;
+      height: 85px;
+      display: none;
+  
+      border-radius: 15px;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(30px);
+      cursor: pointer;
+      font-size: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: black;
+      display:inline-block;
+    }
